@@ -14,9 +14,11 @@
 
   <div class="container">
     <h3>LOGIN</h3>
-    <form action="">
-      <input type="text" placeholder="Username">
-      <input type="password" name="" id="" placeholder="Password">
+    <form action="<?= base_url('auth/login') ?>" method="post">
+      <input type="text" name="username" placeholder="Username">
+      <?= form_error('username', '<small style="display:block; color:red">', '</small>'); ?>
+      <input type="password" name="password" placeholder="Password">
+      <?= form_error('password', '<small style="display:block; color:red">', '</small>'); ?>
       <button type="submit">LOGIN</button>
     </form>
     <a href="">Lupa Password?</a>
