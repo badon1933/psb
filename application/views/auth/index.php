@@ -13,15 +13,20 @@
 <body>
 
   <div class="container">
-    <h3>LOGIN</h3>
     <form action="<?= base_url('auth/login') ?>" method="post">
-      <input type="text" name="username" placeholder="Username">
-      <?= form_error('username', '<small style="display:block; color:red">', '</small>'); ?>
-      <input type="password" name="password" placeholder="Password">
-      <?= form_error('password', '<small style="display:block; color:red">', '</small>'); ?>
+      <div class="input">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Username">
+        <?= form_error('username', '<small style="display:block; color:red">', '</small>'); ?>
+      </div>
+      <div class="input">
+        <label for="username">Password</label>
+        <input type="password" name="password" placeholder="Password">
+        <?= form_error('password', '<small style="display:block; color:red">', '</small>'); ?>
+      </div>
+      <a href="">Lupa Password?</a>
       <button type="submit">LOGIN</button>
     </form>
-    <a href="">Lupa Password?</a>
   </div>
 
 </body>
